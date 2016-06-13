@@ -1,0 +1,11 @@
+{
+	"name": "node-irc-telegram-relay",
+	"description": "Relay an IRC Channel to a Telegram group",
+	"version": "1.0.0",
+	"dependencies": {
+		"irc": "*",
+		"irc-colors": "*",
+		"request": "*",
+		"imgur": "*"
+	}
+}

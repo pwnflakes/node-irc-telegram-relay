@@ -1,0 +1,20 @@
+{
+
+	"server": "irc.androidirc.org",
+	"botName": "Telegram",
+	"channels": [
+		"#android"
+	],
+	"channelToRelay": "#android",
+
+	"floodProtection": true,
+	"autoRejoin": true,
+	"autoConnect": true,
+
+	"telegram_token": "",
+	"telegram_chatid": 0,
+	"last_offset": 0,
+	"fetchInterval": 1500,
+
+	"imgur_api_key": ""
+}
