@@ -6,6 +6,7 @@ var imgur = require('imgur');
 var fs = require('fs');
 
 var config = JSON.parse(fs.readFileSync('./config.json'));
+config.connected = false;
 
 imgur.setClientId(config.imgur_api_key);
 
@@ -16,7 +17,11 @@ var bot = new irc.Client(config.server, config.botName, {
 
 bot.addListener('registered', function(message) {
 	console.log('Relay bot connected.');
-	fetchNewMessages();
+
+	if(!config.connected) {
+		config.connected = true;
+		fetchNewMessages();
+	}
 });
 
 bot.addListener('error', function(xhr, test) {
