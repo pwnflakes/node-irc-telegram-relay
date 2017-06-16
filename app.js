@@ -45,7 +45,7 @@ bot.addListener('kick' + config.channelToRelay, function(nick, by, reason, messa
 });
 
 bot.addListener('message' + config.channelToRelay, function (nick, text, message) {
-	sendToRelayGroup('<' + nick + '> ' + irc_colors.stripColorsAndStyle(text));
+	sendToRelayGroup('<' + nick + '> ' + irc_colors.stripStyle(irc_colors.stripColors(text)));
 });
 
 function sendToRelayGroup(message)
